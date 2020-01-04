@@ -1,0 +1,19 @@
+<% include partials/header %>
+<main class="container text-center">
+  <h2>Clusters:</h2>
+  <% if (data.clusters) { -%>
+    <% for (const cluster of Object.keys(data.clusters)) { -%>
+      <%=cluster%>
+      <ul>
+        <% for (const word of data.clusters[cluster]) { -%>
+          <li>
+            <%=word%>
+          </li>
+        <% } -%>
+      </ul>
+    <% } -%>
+  <% } else { -%>
+  
+  <% } -%>
+</main>
+<% include partials/footer %>
